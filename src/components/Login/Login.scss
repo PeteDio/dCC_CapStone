@@ -1,0 +1,64 @@
+
+.loginForm{
+
+
+    width: 250px;
+    background-color: skyblue;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+
+
+    .login{
+      
+
+
+
+
+        button{
+          margin: 100%;
+          display: inline-block;
+          padding: 0.35em 1.2em;
+          border: 0.1em solid #FFFFFF;
+          margin: 0 0.3em 0.3em 0;
+          border-radius: 0.12em;
+          box-sizing: border-box;
+          text-decoration:none;
+          font-weight:300;
+          text-align:center;
+          transition: all 0.2s;
+          color:#000000;
+          background-color:white;
+
+
+
+          
+              }
+          button:hover{
+              color:#241919;
+              background-color:grey;
+            }   
+          } 
+          
+
+      
+}
+        input, select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+
+
+      .loginText{
+          cursor: pointer;
+
+      }
+
+
+

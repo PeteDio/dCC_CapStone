@@ -1,0 +1,7 @@
+.sections{
+  width: 100%;
+  position: relative;
+  top: 70px;
+  scroll-behavior: smooth;
+  margin-bottom: 20px;
+}
