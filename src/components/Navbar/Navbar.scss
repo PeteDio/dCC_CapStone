@@ -1,0 +1,29 @@
+
+
+
+.Navbar{
+	top: 0;
+    background-color: skyblue;
+    width: 100%;
+    position: sticky;
+
+
+    .button {
+        height: 100%;
+        background-color: skyblue; 
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: rgb(0, 0, 66);
+        color: white;
+      }  
+}

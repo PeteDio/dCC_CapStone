@@ -5,8 +5,9 @@ import SubMessage from './Message/SubMessage/SubMessage';
 function MessageScroll(props){
     return ( 
         <>
-        <Message user='Anonymous' editable={false} message = 'Looks Great!' likes ={25}/>
-        <Message user='Michael' editable={false} message = 'Yummy!!!!!!!' likes ={75}/>
+        <Message user='Phillip G. Browning' editable={false} message = 'Forget the soup this App is Amazing' likes ={1500}/>
+        <Message user='Michael' editable={false} message = 'That Phillip guy knows what it is all about' likes ={75}/>
+        <Message user='Robert' editable={false} message = 'Mid Meal' likes ={1}/>
         <div className='bottomBar'>
         <div className = 'loader'/>
         </div>

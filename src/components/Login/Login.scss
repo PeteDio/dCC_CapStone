@@ -1,5 +1,5 @@
 
-.loginForm{
+.container{
 
 
     width: 250px;
@@ -7,8 +7,15 @@
     margin-right: auto;
     height: 350px;
     
+    
 
     .login{
+
+      
+
+        .form{
+
+          
       border: solid;
       
       
@@ -42,6 +49,7 @@
               color:#241919;
               background-color:grey;
             }   
+          }
           } 
           
 
