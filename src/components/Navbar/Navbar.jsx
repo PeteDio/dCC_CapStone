@@ -34,10 +34,7 @@ const Navbar = () => {
                 <a className='button' href='/logout'>Logout</a>
             </div>
             <div className="right">
-                <div class="search-box">
-                    <button class="btn-search"><i class="fas fa-search"></i></button>
-                    <input type="text" class="input-search" placeholder="Type to Search..."/>
-                </div>
+                    <a className='button' href='/search'>Look for recipes</a>
             </div>
         </div>
      );

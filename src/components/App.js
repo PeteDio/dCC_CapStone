@@ -9,6 +9,7 @@ import Logout from './logout/Logout.jsx'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Profile from './Profile/Profile.jsx'
+import Search from './Search/Search.jsx'
 import EditProfile from './EditProfile/EditProfile.jsx';
 
 
@@ -76,7 +77,9 @@ export default function App() {
                     {/* Logout */}
                     <Route path='/logout' element={<Logout/>}/>
                     {/* Edit Profile */}
-                    <Route path="/EditProfile" element={<EditProfile edit={user} editCall={editProfile}/>} />
+                    <Route path="/editprofile" element={<EditProfile edit={user} editCall={editProfile}/>} />
+                    {/* Search */}
+                    <Route path="/search" element={<Search/>} />
               </Routes>
           </BrowserRouter>
             </div>
