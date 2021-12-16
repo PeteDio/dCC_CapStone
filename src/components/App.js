@@ -5,6 +5,7 @@ import Registration from './Registration/Registration.jsx'
 import Login from './Login/Login.jsx';
 import HomePage from '../components/MealPost/MealPost.jsx';
 import jwtDecode from 'jwt-decode'
+import Logout from './logout/Logout.jsx'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -59,6 +60,8 @@ export default function App() {
                     <Route path="/home" element={<HomePage user={user}/>} />      
                     {/* Regristration page */}
                     <Route path="/registration" element={<Registration/>} />
+                    {/* Logout */}
+                    <Route path='/logout' element={<Logout/>}/>
               </Routes>
           </BrowserRouter>
             </div>

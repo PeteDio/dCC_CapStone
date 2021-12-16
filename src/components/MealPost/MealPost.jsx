@@ -6,10 +6,12 @@ import Post from './Post/Post.jsx'
 
     function MealPost() { 
         return ( 
-            <div>
+            <div className='ColHolder'>
             <Post/>
+            <div className="replies">
             <TopCommentsBox autoFocus={false}/>
             <MessageScroll />
+            </div>
             </div>
         );
     }

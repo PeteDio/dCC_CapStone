@@ -30,6 +30,10 @@ body{
     border-top: 5px solid #606060;
     animation: spin 1s linear infinite;
 }
+.replies{
+    width: 55%;
+    justify-content: center;
+}
 
 @keyframes spin {
     0%{

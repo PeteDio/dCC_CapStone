@@ -5,24 +5,14 @@ import './Navbar.scss'
 
 
 
-const Navbar = (props) => {
-    const [currentUser, setCurrentUser] = useState();
-
-    const logOut = ()=>{
-        localStorage.removeItem("token", "refresh");
-        setCurrentUser({})
-        console.log('The user is not signed in')
-        
-
-      }
-
+const Navbar = () => {
     
     return ( 
         <div>
             <div className='Navbar'>
             <a className='button' href='/home'>Home</a>
             <a className='button' >Profile</a>
-            <a className='button' onClick={logOut} >Logout</a>
+            <a className='button' href='/logout'>Logout</a>
         </div>
         </div>
      );
