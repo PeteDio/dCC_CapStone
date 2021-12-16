@@ -1,4 +1,5 @@
 import { Card } from 'react-bootstrap';
+import './logout.scss'
 
 const Logout = () => {
 
@@ -8,7 +9,7 @@ const Logout = () => {
         console.log("Successfully logged out")
     }
     const handleNoClick = () => {
-        window.location = '/Forum';
+        window.location = '/home';
     }
     return (
         <div className="logout">
@@ -18,8 +19,8 @@ const Logout = () => {
                 <Card.Text>
                 Are you sure you want to logout?
                 </Card.Text>
-                <button onClick={handleClick}>Yes</button>
-                <button onClick={handleNoClick}>No</button>
+                <button className='yes' onClick={handleClick}>Yes</button>
+                <button className='no' onClick={handleNoClick}>No</button>
             </Card.Body>
             </center>
         </Card>
