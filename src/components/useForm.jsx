@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const UseFormOne = (callback) => {
+const UseForm = (callback) => {
     const[formValues, setFormValues] = useState({});
 
     const handleChange = (event) => {
@@ -17,4 +17,4 @@ const UseFormOne = (callback) => {
     return {formValues, handleChange, handleSubmit};
 }
  
-export default UseFormOne;
+export default UseForm;
