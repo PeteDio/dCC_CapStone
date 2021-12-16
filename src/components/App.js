@@ -19,7 +19,6 @@ export default function App() {
   const [jwt, setJwt] = useState()
   const [loadData, setLoadData] = useState(false)
 
-  //Getting token from local storage
   const getUserJWT = () => {
       const jwt = localStorage.getItem('token');
       try {
@@ -56,6 +55,7 @@ export default function App() {
       let response = await axios.put(`http://127.0.0.1:8000/api/auth/edit/${id}`, userObject, {headers:{Authorization:'Bearer ' + jwt}})
       setUser(response.data)
   }
+  
 
 
   return (
@@ -72,7 +72,7 @@ export default function App() {
                     {/* Regristration page */}
                     <Route path="/registration" element={<Registration/>} />
                     {/* Profile */}
-                    <Route path='/profile' element={<Profile user={user} />}/>
+                    <Route path="/Profile" element={<Profile user={user} deets={user}/>} />
                     {/* Logout */}
                     <Route path='/logout' element={<Logout/>}/>
                     {/* Edit Profile */}

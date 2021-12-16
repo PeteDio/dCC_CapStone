@@ -2,11 +2,34 @@
 .container{
 
 
-    width: 250px;
     margin-left: auto;
     margin-right: auto;
     height: 350px;
     
+    .button{
+      margin: 100%;
+      display: inline-block;
+      padding: 0.35em 1.2em;
+      border: 0.1em solid #FFFFFF;
+      margin: 0 0.3em 0.3em 0;
+      border-radius: 0.12em;
+      box-sizing: border-box;
+      text-decoration:none;
+      font-weight:300;
+      text-align:center;
+      transition: all 0.2s;
+      color:#000000;
+      background-color:skyblue;
+      align-items: center;
+
+
+
+      
+          }
+      .button:hover{
+          color:#241919;
+          background-color:grey;
+        }  
     
 
     .login{
@@ -14,6 +37,7 @@
       
 
         .form{
+          width: 15%;
 
           
       border: solid;
@@ -25,30 +49,7 @@
       }
 
 
-        button{
-          margin: 100%;
-          display: inline-block;
-          padding: 0.35em 1.2em;
-          border: 0.1em solid #FFFFFF;
-          margin: 0 0.3em 0.3em 0;
-          border-radius: 0.12em;
-          box-sizing: border-box;
-          text-decoration:none;
-          font-weight:300;
-          text-align:center;
-          transition: all 0.2s;
-          color:#000000;
-          background-color:skyblue;
-          align-items: center;
-
-
-
-          
-              }
-          button:hover{
-              color:#241919;
-              background-color:grey;
-            }   
+         
           }
           } 
           

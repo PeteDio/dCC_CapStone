@@ -5,8 +5,8 @@ import jwtDecode from 'jwt-decode';
 import {Link} from "react-router-dom"
 
 const Login = () => {
-  const[userName, setUserName]= useState("");
-  const[password, setPassword]= useState("");
+  const[userName, setUserName] = useState("");
+  const[password, setPassword] = useState("");
   const [currentUser, setCurrentUser] = useState();
   const [jwt, setJwt] = useState();
 
@@ -35,7 +35,7 @@ const Login = () => {
 
   const onSubmit = async (e)=>{
     e.preventDefault();
-      let user ={
+      let user = {
         "username": userName,
         "password": password,
       }
@@ -46,7 +46,7 @@ const Login = () => {
     localStorage.setItem("token", response.data.access)
     localStorage.setItem("refresh", response.data.refresh)
     getJWT()
-    window.location = '/home';
+    window.location = '/';
   };
 
 
@@ -58,7 +58,7 @@ const Login = () => {
             <input type='text' onChange={(e)=>setUserName(e.target.value)}></input>
             <label>Password</label>
             <input type='password' onChange={(e)=>setPassword(e.target.value)}></input>
-            <button type='submit'>Login</button> <span>or <Link to="registration">click here</Link> to register</span>
+            <button className='button'type='submit'>Login</button> <span>or <Link to="registration">click here</Link> to register</span>
         </form>
       </div>
     </div>
