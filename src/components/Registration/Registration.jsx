@@ -31,7 +31,7 @@ const Registration = () => {
     return (
         <div className="registration">
             <form className="form" onSubmit={onSubmit}>
-                <label>UserName</label>
+                <label>Username</label>
                 <input type='text' onChange={(e)=>setUserName(e.target.value)}></input>
                 <label>Password</label>
                 <input type='password' onChange={(e)=>setPassword(e.target.value)}></input>

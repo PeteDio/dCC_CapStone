@@ -17,7 +17,10 @@ import axios from 'axios';
 
         return ( 
             <div className='ColHolder'>
-                <button onClick={getMeals}> all meals</button>
+            {/* <button onClick={getMeals}> all meals</button>
+            
+            
+            */}
             <Post/>
             <div className="replies">
             <TopCommentsBox autoFocus={false}/>
