@@ -11,7 +11,7 @@ const Navbar = () => {
         <div>
             <div className='Navbar'>
             <a className='button' href='/home'>Home</a>
-            <a className='button' >Profile</a>
+            <a className='button' href='/profile'>Profile</a>
             <a className='button' href='/logout'>Logout</a>
         </div>
         </div>

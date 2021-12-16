@@ -8,6 +8,9 @@ import jwtDecode from 'jwt-decode'
 import Logout from './logout/Logout.jsx'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Profile from './Profile/Profile.jsx'
+import EditProfile from './EditProfile/EditProfile.jsx';
+
 
 export default function App() {
 
@@ -46,6 +49,14 @@ export default function App() {
       setJwt(localStorage.getItem('token'));
     }
 
+    const editProfile = async (userObject) => {
+      const jwt = localStorage.getItem('token')
+      let id = user.id
+      console.log(id)
+      let response = await axios.put(`http://127.0.0.1:8000/api/auth/edit/${id}`, userObject, {headers:{Authorization:'Bearer ' + jwt}})
+      setUser(response.data)
+  }
+
 
   return (
     <div>
@@ -60,8 +71,12 @@ export default function App() {
                     <Route path="/home" element={<HomePage user={user}/>} />      
                     {/* Regristration page */}
                     <Route path="/registration" element={<Registration/>} />
+                    {/* Profile */}
+                    <Route path='/profile' element={<Profile user={user} />}/>
                     {/* Logout */}
                     <Route path='/logout' element={<Logout/>}/>
+                    {/* Edit Profile */}
+                    <Route path="/EditProfile" element={<EditProfile edit={user} editCall={editProfile}/>} />
               </Routes>
           </BrowserRouter>
             </div>
