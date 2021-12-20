@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from './Navbar/Navbar.jsx';
 import Registration from './Registration/Registration.jsx'
 import Login from './Login/Login.jsx';
-import HomePage from '../components/MealPost/MealPost.jsx';
+import MealForm from './MealForm/MealForm.jsx';
 import jwtDecode from 'jwt-decode'
 import Logout from './logout/Logout.jsx'
 import { useState, useEffect } from 'react';
@@ -11,6 +11,7 @@ import axios from 'axios';
 import Profile from './Profile/Profile.jsx'
 import Search from './Search/Search.jsx'
 import EditProfile from './EditProfile/EditProfile.jsx';
+import HomePage from './Homepage/HomePage';
 
 
 export default function App() {
@@ -37,7 +38,7 @@ export default function App() {
     },[])
 
     const getUserLogin = async () => {
-      const response = await axios.get('', { headers: {Authorization: 'Bearer http://127.0.0.1:8000/api/auth/login/' + jwt}});
+      const response = await axios.get('http://127.0.0.1:8000/api/auth/login/', { headers: {Authorization: 'Bearer ' + jwt}});
       setUserLogin(response.data);
       console.log(response.data)
     }
@@ -73,13 +74,15 @@ export default function App() {
                     {/* Regristration page */}
                     <Route path="/registration" element={<Registration/>} />
                     {/* Profile */}
-                    <Route path="/Profile" element={<Profile user={user} deets={user}/>} />
+                    <Route path="/Profile" element={<Profile user={user}/>} />
                     {/* Logout */}
                     <Route path='/logout' element={<Logout/>}/>
                     {/* Edit Profile */}
                     <Route path="/editprofile" element={<EditProfile edit={user} editCall={editProfile}/>} />
                     {/* Search */}
                     <Route path="/search" element={<Search/>} />
+                    {/* MealForm */}
+                    <Route path="/search/mealform" element={<MealForm/>} />
               </Routes>
           </BrowserRouter>
             </div>

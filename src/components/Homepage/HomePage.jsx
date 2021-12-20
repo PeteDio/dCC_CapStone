@@ -1,14 +1,14 @@
-import MealPost from "../MealPost/MealPost";
-import './HomePage.css'
+import "./HomePage.scss";
+
 
 const HomePage = () => {
     return ( 
-        <div>
-            <div className="HomePage">
-                {/* This is how to make a meal post we need to link the backend */}
-                
-                <MealPost/> 
-            </div>
+        <div className="homePage">
+            <h3>firstname</h3>
+            <h3>lastname</h3>
+            <h3>caption</h3>
+            <h3>likes</h3>
+            <h3>comments</h3>
         </div>
      );
 }

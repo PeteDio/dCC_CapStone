@@ -42,11 +42,10 @@ const Login = () => {
     console.log("User Info: ", user)
     let response = await axios.post('http://127.0.0.1:8000/api/auth/login/', user);
     console.log("Token results are: ", response.data)
-    // add response to local storage.
     localStorage.setItem("token", response.data.access)
     localStorage.setItem("refresh", response.data.refresh)
     getJWT()
-    window.location = '/';
+    window.location = '/home';
   };
 
 

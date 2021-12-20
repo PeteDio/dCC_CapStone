@@ -44,9 +44,10 @@ const Search = () => {
                 autoComplete="off" onChange={onChange} value={query}/>
                 <input type="submit" value="search"/>
             </form>
+            {console.log(recipes)}
             <div className="recipes">
                 {recipes !==[] && 
-                recipes.map(recipe => <Recipes key={uuidv4()} recipe={recipe}/>)}
+                recipes.map(recipe => <Recipes key={uuidv4()} recipe={recipe} />)}
             </div>
         </div>
     )
