@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Navbar from './Navbar/Navbar.jsx';
 import Registration from './Registration/Registration.jsx'
 import Login from './Login/Login.jsx';
-import MealForm from './MealForm/MealForm.jsx';
+import FormMeal from './FormMeal/FormMeal.jsx';
 import jwtDecode from 'jwt-decode'
 import Logout from './logout/Logout.jsx'
 import { useState, useEffect } from 'react';
@@ -81,8 +81,8 @@ export default function App() {
                     <Route path="/editprofile" element={<EditProfile edit={user} editCall={editProfile}/>} />
                     {/* Search */}
                     <Route path="/search" element={<Search/>} />
-                    {/* MealForm */}
-                    <Route path="/search/mealform" element={<MealForm/>} />
+                    {/* FormMeal */}
+                    <Route path="/search/formmeal" element={<FormMeal/>} />
               </Routes>
           </BrowserRouter>
             </div>
