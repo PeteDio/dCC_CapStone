@@ -45,7 +45,7 @@ const Login = () => {
     localStorage.setItem("token", response.data.access)
     localStorage.setItem("refresh", response.data.refresh)
     getJWT()
-    window.location = '/home';
+    window.location = '/search';
   };
 
 

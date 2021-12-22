@@ -7,6 +7,7 @@ const Recipes = ({ recipe }) => {
   const [toggleIngredients, setToggleIngredients] = useState(false);
   const [toggleReview, setToggleReview] = useState(false);
 
+
   const { label, image, url, ingredients } = recipe.recipe;
 
   return (
