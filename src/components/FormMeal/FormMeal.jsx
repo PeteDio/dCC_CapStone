@@ -17,32 +17,23 @@ const FormMeal = (recipe) => {
     };
 
     console.log("meal Post info:", payload);
+    const jwt = localStorage.getItem("token");
+    let response = await axios.post(
+      "http://127.0.0.1:8000/api/meals/user/post",
+      payload,
+      { headers: { Authorization: "Bearer " + jwt } }
+    );
+    console.log("New post data sent: ", response.data);
     window.location = "/home";
-    // const jwt = localStorage.getItem("token");
-    // try {
-    //   let response = await axios.post(
-    //     "http://127.0.0.1:8000/api/meals/user/",
-    //     payload,
-    //     { headers: { Authorization: "Bearer " + jwt } }
-    //   );
-    //   console.log("New post data sent: ", response.data);
-    //   window.location = "/home";
-    // } catch (ex) {
-    //   console.log(ex);
-    // }
   };
 
   return (
     <form className="form" onSubmit={onSubmit}>
       <label>Caption</label>
-      <input type="date" onChange={(e) => setDate(e.target.value)}></input>
       <input type="text" onChange={(e) => setCaption(e.target.value)}></input>
-      <button className="button" type="submit">
-        Post A Meal
-      </button>
-      <div className="IconWrapper">
-        <StarIcon className="icon"></StarIcon>
-      </div>
+      <input type="date" onChange={(e) => setDate(e.target.value)}></input>
+      <button type="submit">Post A Meal</button>
+      <StarIcon className="icon"></StarIcon>
     </form>
   );
 };
