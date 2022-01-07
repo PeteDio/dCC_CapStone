@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useState} from 'react';
 import { Form } from 'react-bootstrap';
 import useForm from '../useForm';
 import { useNavigate } from 'react-router';
@@ -9,6 +9,8 @@ import Button from 'react-bootstrap/Button'
 const EditProfile = (props) => {
 
     const {formValues, handleChange, handleSubmit} = useForm(edit)
+    const [user, grabUser] = useState(""); 
+
 
     let navigate = useNavigate()
 
@@ -89,5 +91,5 @@ const EditProfile = (props) => {
         </div>
      );
 }
- 
+
 export default EditProfile;

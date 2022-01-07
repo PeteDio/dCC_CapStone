@@ -29,6 +29,13 @@ export default function App() {
     } catch {}
   };
 
+  const getUserInfo = async (user) => {
+    const jwt = localStorage.getItem('token')
+    let logged = await axios.get(`http://127.0.0.1:8000/api/auth/user/${user}`, {headers:{Authorization:'Bearer ' + jwt}})
+    setUser(logged.data)
+    console.log('user info', logged.data)
+}
+
   useEffect(() => {
     getUserJWT();
     getUserLogin();
@@ -53,17 +60,7 @@ export default function App() {
     setJwt(localStorage.getItem("token"));
   };
 
-  const editProfile = async (userObject) => {
-    const jwt = localStorage.getItem("token");
-    let id = user.id;
-    console.log(id);
-    let response = await axios.put(
-      `http://127.0.0.1:8000/api/auth/edit/${id}`,
-      userObject,
-      { headers: { Authorization: "Bearer " + jwt } }
-    );
-    setUser(response.data);
-  };
+
 
   const getComments = async (id) => {
     console.log(id);
@@ -116,14 +113,14 @@ export default function App() {
             {/* Logout */}
             <Route path="/logout" element={<Logout />} />
             {/* Edit Profile */}
-            <Route
+            {/* <Route
               path="/editprofile"
-              element={<EditProfile edit={user} editCall={editProfile} />}
-            />
+              element={<EditProfile editCall={editProfile} />}
+            /> */}
             {/* Search */}
             <Route path="/search" element={<Search user={user} />} />
             {/* FormMeal */}
-            <Route path="/search/formmeal" element={<FormMeal />} />
+            <Route path="/search/formmeal" element={<FormMeal user={user} />} />
           </Routes>
         </BrowserRouter>
       </div>

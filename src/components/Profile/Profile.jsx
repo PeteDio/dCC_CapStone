@@ -5,7 +5,7 @@ import axios from "axios";
 
 const ProfilePage = (props) => {
 
-
+  
   const meals = [
     {
         "recipe": "https://norecipes.com/beef-tacos-recipe/",
@@ -19,6 +19,7 @@ const ProfilePage = (props) => {
 
   return (
     <React.Fragment>
+      {console.log(props)}
       <div>
         <form>
           <Table>
