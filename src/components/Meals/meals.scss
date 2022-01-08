@@ -1,3 +1,18 @@
-.meal{
-    border: black;
+.meal {
+
+  .recipeLink {
+    background-color: teal;
+  }
+  .comments {
+    border: solid;
+  }
+  .caption{
+      border: steelblue;
+      background-color: steelblue;
+      padding: 10px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
